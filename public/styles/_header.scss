@@ -1,0 +1,27 @@
+.heading {
+  width: 100%;
+  padding: 20px 0;
+  &__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__menu-link {
+    color: #a6a5aa;
+    padding: 10px 20px;
+    line-height: 1;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    i {
+      font-size: 10px;
+      margin-left: 5px;
+    }
+    &:hover {
+      background: $gradient;
+      color: #fff;
+    }
+  }
+}
