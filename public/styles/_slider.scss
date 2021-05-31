@@ -1,0 +1,64 @@
+.slider {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  padding: 0 15px;
+  &__post {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    &:hover > div:not(.slider__post-info) {
+      transform: scale(1.05);
+    }
+  }
+  &__thumbnail {
+    transition: all 0.3s ease-in-out;
+    background-image: url("https://source.unsplash.com/random");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 356px;
+    width: 100%;
+    transform: scale(1);
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: inherit;
+    }
+  }
+  &__post-info {
+    position: absolute;
+    z-index: 2;
+    padding: 0 35px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h3 {
+      color: #fff;
+    }
+  }
+  &__post-label {
+    background: $gradient;
+    color: #fff;
+    border-radius: 30px;
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+  }
+  &__post-title {
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}

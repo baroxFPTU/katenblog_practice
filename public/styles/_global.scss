@@ -33,3 +33,63 @@ html {
 .transition {
   transition: all 0.3s ease-in-out;
 }
+
+.post-timestamp {
+  color: $gray;
+
+  font-size: 12px;
+}
+.post-author {
+  position: relative;
+  margin-right: 30px;
+}
+.post-author:after {
+  content: "";
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  margin: 0 15px;
+  vertical-align: middle;
+  position: absolute;
+  background-color: $gray;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.post-label {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: $gradient;
+  font-size: 0.75rem;
+  border-radius: 30px;
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.author__name {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: $bluedark;
+  .dot {
+    font-size: 2.5rem;
+    color: $pink;
+  }
+}
+
+.author__desc {
+  color: $gray;
+  font-size: 13px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  &__item:first-child {
+    padding-left: 0;
+  }
+  &__item {
+    padding: 0 10px;
+  }
+}
