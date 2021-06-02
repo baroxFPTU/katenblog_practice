@@ -93,3 +93,22 @@ html {
     padding: 0 10px;
   }
 }
+
+h3 {
+  color: $bluedark;
+  text-transform: capitalize;
+}
+
+.wave {
+  padding: 20px 0;
+}
+
+.btn {
+  background: $gradient;
+  color: #fff;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 12px;
+}
