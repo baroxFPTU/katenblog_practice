@@ -56,15 +56,28 @@ html {
   transform: translateY(-50%);
 }
 
+.post__thumbnail {
+  transition: all 0.3s ease-in-out;
+  background-image: url("https://source.unsplash.com/random");
+  background-size: cover;
+  background-size: 105%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 245px;
+  width: 100%;
+  position: relative;
+}
+
 .post-label {
   position: absolute;
   top: 20px;
   left: 20px;
   background: $gradient;
-  font-size: 0.75rem;
+  font-size: 0.625rem;
   border-radius: 30px;
   color: #fff;
   padding: 5px 10px;
+  z-index: 9;
 }
 
 .author__name {
