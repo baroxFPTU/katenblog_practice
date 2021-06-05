@@ -34,12 +34,9 @@
       overflow: hidden;
     }
     .instagram-image {
-      background-image: url("https://source.unsplash.com/random");
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      width: 100%;
-      height: 185px;
+      max-width: 100%;
+      height: auto;
+      max-height: 185px;
     }
   }
 }
@@ -64,6 +61,102 @@
       i {
         margin-right: 5px;
       }
+    }
+  }
+}
+
+// Responsive
+@media screen and (max-width: 1025px) {
+  .profile {
+    padding: 0 20px;
+  }
+  .container,
+  footer {
+    padding: 0 10px;
+  }
+  .slider {
+    grid-template-columns: repeat(4, 1fr);
+
+    .slider__post:last-child {
+      display: none;
+    }
+  }
+  .author__desc {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slider {
+    grid-template-columns: repeat(3, 1fr);
+    .slider__post:last-child,
+    .slider__post:nth-child(1) {
+      display: none;
+    }
+  }
+  .main {
+    .container {
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+    }
+  }
+  .heading {
+    display: none;
+  }
+  .paginate {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .profile .container {
+    flex-direction: column;
+    justify-content: center;
+    .social {
+      display: none;
+    }
+    .author,
+    .tool {
+      width: 100%;
+    }
+    .tool {
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+  }
+
+  .slider,
+  .blogposts-wrapper {
+    grid-template-columns: 1fr !important;
+  }
+  .slider__post:not(:nth-child(3)) {
+    display: none;
+  }
+  .instagram-widget .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    .instagram-link {
+      font-size: 14px;
+      white-space: nowrap;
+    }
+    .instagram-post {
+      justify-self: stretch;
+      height: 185px;
+      img {
+        max-height: none;
+      }
+    }
+  }
+  #footer .container {
+    flex-direction: column;
+    span.w-33 {
+      width: 100%;
+      text-align: center;
+    }
+    .social {
+      width: 100%;
+      padding: 25px 0;
+      justify-content: center;
     }
   }
 }
